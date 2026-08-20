@@ -7,36 +7,36 @@
     <ScrollView>
         <VerticalStackLayout Spacing="0">
 
-          
+
             <VerticalStackLayout
-             BackgroundColor="{StaticResource VerdeMedio}"
-             Padding="24,20,24,24">
+         BackgroundColor="{StaticResource VerdeMedio}"
+         Padding="24,20,24,24">
                 <VerticalStackLayout.GestureRecognizers>
                     <TapGestureRecognizer Tapped="IrMainPage"/>
                 </VerticalStackLayout.GestureRecognizers>
 
                 <Label
-                 Text="&lt;"
-                 FontSize="24"
-                 TextColor="{StaticResource Terracota}"
-                 VerticalOptions="Center"/>
+             Text="&lt;"
+             FontSize="24"
+             TextColor="{StaticResource Terracota}"
+             VerticalOptions="Center"/>
 
                 <Label
-                 Text="Planejamento da Estadia"
-                 FontSize="26"
-                 FontAttributes="Bold"
-                 TextColor="{StaticResource BrancoQuente}"/>
+             Text="Planejamento da Estadia"
+             FontSize="26"
+             FontAttributes="Bold"
+             TextColor="{StaticResource BrancoQuente}"/>
                 <Label
-                 Text="Preencha os dados para verificar disponibilidade"
-                 FontSize="13"
-                 TextColor="{StaticResource CremeEscuro}"
-                 Margin="0,6,0,0"/>
+             Text="Preencha os dados para verificar disponibilidade"
+             FontSize="13"
+             TextColor="{StaticResource CremeEscuro}"
+             Margin="0,6,0,0"/>
             </VerticalStackLayout>
 
-            
+
             <VerticalStackLayout Padding="20" Spacing="16">
 
-              
+
                 <VerticalStackLayout Spacing="6">
                     <Label Text="Data de Check-in" FontSize="13" FontAttributes="Bold" TextColor="{StaticResource TextoSecundario}"/>
                     <Border StrokeShape="RoundRectangle 10" Stroke="{StaticResource CremeEscuro}" BackgroundColor="{StaticResource BrancoQuente}" Padding="14,4">
@@ -44,7 +44,7 @@
                     </Border>
                 </VerticalStackLayout>
 
-               
+
                 <VerticalStackLayout Spacing="6">
                     <Label Text="Data de Check-out" FontSize="13" FontAttributes="Bold" TextColor="{StaticResource TextoSecundario}"/>
                     <Border StrokeShape="RoundRectangle 10" Stroke="{StaticResource CremeEscuro}" BackgroundColor="{StaticResource BrancoQuente}" Padding="14,4">
@@ -52,88 +52,177 @@
                     </Border>
                 </VerticalStackLayout>
 
-              
+                <VerticalStackLayout Spacing="6">
+                    <Label Text="Selecione a Acomodação" FontSize="13" FontAttributes="Bold" TextColor="{StaticResource TextoSecundario}"/>
+                    <CollectionView
+                    x:Name="ListaQuartosReserva"
+                    SelectionMode="Single"
+                    SelectionChanged="ListaQuartosReserva_SelectionChanged">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Border StrokeShape="RoundRectangle 10"
+                    Stroke="{StaticResource CremeEscuro}"
+                    StrokeThickness="1"
+                    BackgroundColor="{StaticResource BrancoQuente}"
+                    Padding="14,10"
+                    Margin="0,0,0,8">
+
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup Name="CommonStates">
+                                            <VisualState Name="Normal">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Stroke" Value="{StaticResource CremeEscuro}"/>
+                                                    <Setter Property="StrokeThickness" Value="1"/>
+                                                    <Setter Property="BackgroundColor" Value="{StaticResource BrancoQuente}"/>
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                            <VisualState Name="Selected">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Stroke" Value="{StaticResource VerdeMedio}"/>
+                                                    <Setter Property="StrokeThickness" Value="2"/>
+                                                    <Setter Property="BackgroundColor" Value="{StaticResource CremeEscuro}"/>
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+
+                                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                                        <VerticalStackLayout Grid.Column="0">
+                                            <Label Text="{Binding Nome}" FontSize="14" FontAttributes="Bold" TextColor="{StaticResource TextoPrincipal}"/>
+                                            <Label Text="{Binding Descricao}" FontSize="11" TextColor="{StaticResource TextoSecundario}" LineBreakMode="TailTruncation" MaxLines="2"/>
+                                        </VerticalStackLayout>
+                                        <Label Grid.Column="1" Text="{Binding Preco, StringFormat='R$ {0:F0}/noite'}" FontSize="12" FontAttributes="Bold" TextColor="{StaticResource Terracota}" VerticalOptions="Center"/>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Spacing="6">
+                    <Label Text="Selecione os Passeios" FontSize="13" FontAttributes="Bold" TextColor="{StaticResource TextoSecundario}"/>
+                    <CollectionView x:Name="ListaPasseiosReserva" SelectionMode="Multiple" SelectionChanged="ListaPasseiosReserva_SelectionChanged">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Border StrokeShape="RoundRectangle 10"
+                    Stroke="{StaticResource CremeEscuro}"
+                    StrokeThickness="1"
+                    BackgroundColor="{StaticResource BrancoQuente}"
+                    Padding="14,10"
+                    Margin="0,0,0,8">
+
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup Name="CommonStates">
+                                            <VisualState Name="Normal">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Stroke" Value="{StaticResource CremeEscuro}"/>
+                                                    <Setter Property="StrokeThickness" Value="1"/>
+                                                    <Setter Property="BackgroundColor" Value="{StaticResource BrancoQuente}"/>
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                            <VisualState Name="Selected">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Stroke" Value="{StaticResource VerdeMedio}"/>
+                                                    <Setter Property="StrokeThickness" Value="2"/>
+                                                    <Setter Property="BackgroundColor" Value="{StaticResource CremeEscuro}"/>
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+
+                                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                                        <VerticalStackLayout Grid.Column="0">
+                                            <Label Text="{Binding Nome}" FontSize="14" FontAttributes="Bold" TextColor="{StaticResource TextoPrincipal}"/>
+                                            <Label Text="{Binding Horario}" FontSize="11" TextColor="{StaticResource TextoSecundario}"/>
+                                        </VerticalStackLayout>
+                                        <Label Grid.Column="1" Text="{Binding Preco, StringFormat='R$ {0:F0}'}" FontSize="12" FontAttributes="Bold" TextColor="{StaticResource Terracota}" VerticalOptions="Center"/>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+
                 <VerticalStackLayout Spacing="6">
                     <Label Text="Quantidade de Hóspedes" FontSize="13" FontAttributes="Bold" TextColor="{StaticResource TextoSecundario}"/>
                     <Border StrokeShape="RoundRectangle 10" Stroke="{StaticResource CremeEscuro}" BackgroundColor="{StaticResource BrancoQuente}" Padding="14,10">
                         <Entry 
-                         x:Name="txt_hospedes"
-                         Placeholder="Ex: 2 adultos"
-                         Keyboard="Numeric"
-                         TextColor="{StaticResource TextoPrincipal}"
-                         PlaceholderColor="{StaticResource TextoSecundario}"/>
+                     x:Name="txt_hospedes"
+                     Placeholder="Ex: 2 adultos"
+                     Keyboard="Numeric"
+                     TextColor="{StaticResource TextoPrincipal}"
+                     PlaceholderColor="{StaticResource TextoSecundario}"/>
                     </Border>
                 </VerticalStackLayout>
 
-              
+
                 <VerticalStackLayout Spacing="6">
                     <Label Text="Seu Nome" FontSize="13" FontAttributes="Bold" TextColor="{StaticResource TextoSecundario}"/>
                     <Border StrokeShape="RoundRectangle 10" Stroke="{StaticResource CremeEscuro}" BackgroundColor="{StaticResource BrancoQuente}" Padding="14,10">
                         <Entry
-                         x:Name="txt_nome"
-                         Placeholder="Nome completo"
-                         TextColor="{StaticResource TextoPrincipal}"
-                         PlaceholderColor="{StaticResource TextoSecundario}"/>
+                     x:Name="txt_nome"
+                     Placeholder="Nome completo"
+                     TextColor="{StaticResource TextoPrincipal}"
+                     PlaceholderColor="{StaticResource TextoSecundario}"/>
                     </Border>
                 </VerticalStackLayout>
 
-            
+
                 <VerticalStackLayout Spacing="6">
                     <Label Text="Observações (opcional)" FontSize="13" FontAttributes="Bold" TextColor="{StaticResource TextoSecundario}"/>
                     <Border StrokeShape="RoundRectangle 10" Stroke="{StaticResource CremeEscuro}" BackgroundColor="{StaticResource BrancoQuente}" Padding="14,10">
                         <Editor
-                         x:Name="txt_obs"
-                         Placeholder="Ex: chegada após 18h, preferência de quarto..."
-                         HeightRequest="80"
-                         TextColor="{StaticResource TextoPrincipal}"
-                         PlaceholderColor="{StaticResource TextoSecundario}"/>
+                     x:Name="txt_obs"
+                     Placeholder="Ex: chegada após 18h, preferência de quarto..."
+                     HeightRequest="80"
+                     TextColor="{StaticResource TextoPrincipal}"
+                     PlaceholderColor="{StaticResource TextoSecundario}"/>
                     </Border>
                 </VerticalStackLayout>
-
 
                 <Border StrokeShape="RoundRectangle 10" BackgroundColor="#FFF3E0" Stroke="#FFB74D" StrokeThickness="1" Padding="14,12">
                     <HorizontalStackLayout Spacing="10">
                         <Label
-                         Text=" Check-in a partir das 14h e check-out até as 12h."
-                         FontSize="12"
-                         TextColor="{StaticResource TextoSecundario}"
-                         HorizontalOptions="Fill"/>
+                     Text=" Check-in a partir das 14h e check-out até as 12h."
+                     FontSize="12"
+                     TextColor="{StaticResource TextoSecundario}"
+                     HorizontalOptions="Fill"/>
 
                     </HorizontalStackLayout>
                 </Border>
 
                 <Button 
-                    Text="Consultar Clima"
-                    Clicked="OnConsultarClimaClicked"/>
-                
+                Text="Consultar Clima"
+                Clicked="OnConsultarClimaClicked"/>
+
                 <Label
-                    x:Name="lblClima"
-                    Text="Clique no botão para consultar a API"
-                    TextColor="{StaticResource TextoPrincipal}"
-                    FontSize="20"
-                    HorizontalOptions="Center" 
-                    Margin="0,10,0,0" />
+                x:Name="lblClima"
+                Text="Clique no botão para consultar a API"
+                TextColor="{StaticResource TextoPrincipal}"
+                FontSize="20"
+                HorizontalOptions="Center" 
+                Margin="0,10,0,0" />
 
                 <Button
-                 Text="Verificar Disponibilidade"
-                 BackgroundColor="{StaticResource VerdeMedio}"
-                 TextColor="{StaticResource BrancoQuente}"
-                 FontSize="15"
-                 FontAttributes="Bold"
-                 HeightRequest="52"
-                 CornerRadius="12"
-                 Clicked="VerificarDisponibilidade"
-                 Margin="0,4,0,0"/>
+             Text="Verificar Disponibilidade"
+             BackgroundColor="{StaticResource VerdeMedio}"
+             TextColor="{StaticResource BrancoQuente}"
+             FontSize="15"
+             FontAttributes="Bold"
+             HeightRequest="52"
+             CornerRadius="12"
+             Clicked="VerificarDisponibilidade"
+             Margin="0,4,0,0"/>
 
                 <Button
-                 Text="Falar pelo WhatsApp"
-                 BackgroundColor="Transparent"
-                 TextColor="{StaticResource VerdeMedio}"
-                 FontSize="14"
-                 BorderColor="{StaticResource VerdeMedio}"
-                 BorderWidth="1.5"
-                 HeightRequest="48"
-                 CornerRadius="12"/>
+             Text="Falar pelo WhatsApp"
+             BackgroundColor="Transparent"
+             TextColor="{StaticResource VerdeMedio}"
+             FontSize="14"
+             BorderColor="{StaticResource VerdeMedio}"
+             BorderWidth="1.5"
+             HeightRequest="48"
+             CornerRadius="12"/>
 
             </VerticalStackLayout>
         </VerticalStackLayout>

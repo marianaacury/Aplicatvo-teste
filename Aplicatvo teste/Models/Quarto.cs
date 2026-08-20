@@ -13,5 +13,7 @@ namespace Aplicatvo_teste.Models
 
         public string Imagem { get; set; }
 
+        public bool Selecionado { get; set; }
+
     }
 }

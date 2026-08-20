@@ -8,43 +8,43 @@
     <Shell.TitleView>
 
         <Label 
-            Text="Acomodações"
-            FontSize="18"
-            FontAttributes="Bold"
-            TextColor="{StaticResource BrancoQuente}"
-            VerticalOptions="Center"/>
+        Text="Acomodações"
+        FontSize="18"
+        FontAttributes="Bold"
+        TextColor="{StaticResource BrancoQuente}"
+        VerticalOptions="Center"/>
     </Shell.TitleView>
     <ScrollView>
         <VerticalStackLayout Spacing="0">
 
-            
+
 
             <VerticalStackLayout 
-            BackgroundColor="{StaticResource VerdeEscuro}"
-            Padding="24,20,24,24">
+        BackgroundColor="{StaticResource VerdeEscuro}"
+        Padding="24,20,24,24">
 
                 <VerticalStackLayout.GestureRecognizers>
                     <TapGestureRecognizer Tapped="IrMainPage"/>
                 </VerticalStackLayout.GestureRecognizers>
 
                 <Label
-                    Text="&lt;"
-                    FontSize="24"
-                    TextColor="{StaticResource Terracota}"
-                    VerticalOptions="Center"/>
+                Text="&lt;"
+                FontSize="24"
+                TextColor="{StaticResource Terracota}"
+                VerticalOptions="Center"/>
 
                 <Label
-                    Text="Nossas Acomodações"
-                    FontSize="26"
-                    FontAttributes="Bold"
-                    TextColor="{StaticResource BrancoQuente}"/>
+                Text="Nossas Acomodações"
+                FontSize="26"
+                FontAttributes="Bold"
+                TextColor="{StaticResource BrancoQuente}"/>
                 <Label
-                    Text="16 suítes exclusivas com piscina privativa e banheira de hidromassagem"
-                    FontSize="13"
-                    TextColor="{StaticResource CremeEscuro}"
-                    Margin="0,6,0,0"/>
+                Text="16 suítes exclusivas com piscina privativa e banheira de hidromassagem"
+                FontSize="13"
+                TextColor="{StaticResource CremeEscuro}"
+                Margin="0,6,0,0"/>
             </VerticalStackLayout>
-            
+
 
             <VerticalStackLayout Padding="20" Spacing="16">
 
@@ -54,56 +54,56 @@
                             <VerticalStackLayout Spacing="0">
 
                                 <Image 
-                                    Source="{Binding Imagem}"
-                                    Aspect="AspectFill"
-                                    HeightRequest="200"/>
+                                Source="{Binding Imagem}"
+                                Aspect="AspectFill"
+                                HeightRequest="200"/>
 
                                 <Border 
-                                    StrokeShape="RoundRectangle 14"
-                                    Stroke="{StaticResource CremeEscuro}"
-                                    StrokeThickness="1"
-                                    Margin="0,0,0,4">
+                                StrokeShape="RoundRectangle 14"
+                                Stroke="{StaticResource CremeEscuro}"
+                                StrokeThickness="1"
+                                Margin="0,0,0,4">
 
                                     <VerticalStackLayout BackgroundColor="{StaticResource BrancoQuente}" Spacing="0">
 
                                         <Grid 
-                                            BackgroundColor="{StaticResource VerdeMedio}"
-                                            Padding="18,14">
+                                        BackgroundColor="{StaticResource VerdeMedio}"
+                                        Padding="18,14">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="Auto"/>
                                                 <ColumnDefinition Width="Auto"/>
                                             </Grid.ColumnDefinitions>
 
-                                           
+
 
                                             <Label 
-                                                Grid.Column="0"
-                                                Text="{Binding Nome}"
-                                                FontSize="18"
-                                                FontAttributes="Bold"
-                                                TextColor="{StaticResource BrancoQuente}"
-                                                VerticalOptions="Center"/>
+                                            Grid.Column="0"
+                                            Text="{Binding Nome}"
+                                            FontSize="18"
+                                            FontAttributes="Bold"
+                                            TextColor="{StaticResource BrancoQuente}"
+                                            VerticalOptions="Center"/>
 
                                             <Border 
-                                                Grid.Column="1"
-                                                StrokeShape="RoundRectangle 20"
-                                                BackgroundColor="{StaticResource Terracota}"
-                                                Padding="10,4">
+                                            Grid.Column="1"
+                                            StrokeShape="RoundRectangle 20"
+                                            BackgroundColor="{StaticResource Terracota}"
+                                            Padding="10,4">
                                                 <Label 
-                                                    Text="{Binding Preco, StringFormat='R$ {0:F0}'}"
-                                                    FontSize="13"
-                                                    FontAttributes="Bold"
-                                                    TextColor="White"/>
+                                                Text="{Binding Preco, StringFormat='R$ {0:F0}'}"
+                                                FontSize="13"
+                                                FontAttributes="Bold"
+                                                TextColor="White"/>
                                             </Border>
                                         </Grid>
 
                                         <VerticalStackLayout Padding="18,14" Spacing="10">
 
                                             <Label 
-                                                Text="{Binding Descricao}"
-                                                FontSize="14"
-                                                TextColor="{StaticResource TextoSecundario}"/>
+                                            Text="{Binding Descricao}"
+                                            FontSize="14"
+                                            TextColor="{StaticResource TextoSecundario}"/>
 
                                             <HorizontalStackLayout Spacing="10" Margin="0,4,0,0">
                                                 <Border StrokeShape="RoundRectangle 6" BackgroundColor="{StaticResource Gray100}" Padding="8,4">
@@ -115,9 +115,9 @@
                                             </HorizontalStackLayout>
 
                                             <Label 
-                                                Text="por noite"
-                                                FontSize="11"
-                                                TextColor="{StaticResource TextoSecundario}"/>
+                                            Text="por noite"
+                                            FontSize="11"
+                                            TextColor="{StaticResource TextoSecundario}"/>
 
                                         </VerticalStackLayout>
                                     </VerticalStackLayout>

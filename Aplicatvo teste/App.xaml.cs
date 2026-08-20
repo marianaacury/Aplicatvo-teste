@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Aplicatvo_teste.Models;
+using Microsoft.Extensions.DependencyInjection;
+using System.Collections.Generic;
 
 namespace Aplicatvo_teste
 {

@@ -11,5 +11,6 @@ namespace Aplicatvo_teste.Models
         public string Horario { get; set; }
         public double Preco { get; set; }
         public string Icone { get; set; } = "🌿";
+        public bool Selecionado { get; set; }
     }
 }

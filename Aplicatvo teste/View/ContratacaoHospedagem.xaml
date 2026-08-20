@@ -6,16 +6,16 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="{StaticResource VerdeEscuro}">
     <VerticalStackLayout
-    VerticalOptions="CenterAndExpand"
-    Padding="10">
+VerticalOptions="CenterAndExpand"
+Padding="10">
         <Label 
-        Text="Cálculo da Diária"
-        TextColor="{StaticResource Cinza}"
-        FontFamily="KalamBold"
-        FontSize="50"
-        HorizontalOptions="Center"
-        VerticalOptions="Center"
-        HorizontalTextAlignment="Center"/>
+    Text="Cálculo da Diária"
+    TextColor="{StaticResource Cinza}"
+    FontFamily="KalamBold"
+    FontSize="50"
+    HorizontalOptions="Center"
+    VerticalOptions="Center"
+    HorizontalTextAlignment="Center"/>
 
         <Frame Padding="10" BackgroundColor="{StaticResource Cinza}">
             <VerticalStackLayout>

@@ -6,27 +6,27 @@
     <ScrollView>
         <VerticalStackLayout Spacing="0">
 
-           
+
             <VerticalStackLayout
-            BackgroundColor="{StaticResource Terracota}"
-            Padding="24,20,24,24">
+         BackgroundColor="{StaticResource Terracota}"
+         Padding="24,20,24,24">
                 <VerticalStackLayout.GestureRecognizers>
                     <TapGestureRecognizer Tapped="IrMainPage"/>
                 </VerticalStackLayout.GestureRecognizers>
 
                 <Label
-                 Text="&lt;"
-                 FontSize="24"
-                 TextColor="{StaticResource VerdeEscuro}"
-                 VerticalOptions="Center"/>
+              Text="&lt;"
+              FontSize="24"
+              TextColor="{StaticResource VerdeEscuro}"
+              VerticalOptions="Center"/>
 
                 <Label
-                Text="Avaliações dos Hóspedes"
-                FontSize="26"
-                FontAttributes="Bold"
-                TextColor="{StaticResource BrancoQuente}"/>
+             Text="Avaliações dos Hóspedes"
+             FontSize="26"
+             FontAttributes="Bold"
+             TextColor="{StaticResource BrancoQuente}"/>
 
-                
+
                 <Grid Margin="0,14,0,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -34,10 +34,10 @@
                     </Grid.ColumnDefinitions>
 
                     <Border 
-                    Grid.Column="0"
-                    StrokeShape="RoundRectangle 12"
-                    BackgroundColor="{StaticResource Dourado}"
-                    Padding="14,10">
+                 Grid.Column="0"
+                 StrokeShape="RoundRectangle 12"
+                 BackgroundColor="{StaticResource Dourado}"
+                 Padding="14,10">
                         <VerticalStackLayout>
                             <Label Text="9.4" FontSize="30" FontAttributes="Bold" TextColor="{StaticResource VerdeEscuro}" HorizontalTextAlignment="Center"/>
                             <Label Text="EXCELENTE" FontSize="9" TextColor="{StaticResource VerdeEscuro}" HorizontalTextAlignment="Center" CharacterSpacing="2"/>
@@ -52,19 +52,19 @@
                 </Grid>
             </VerticalStackLayout>
 
-            
+
             <VerticalStackLayout Padding="20" Spacing="14">
 
-                
+
                 <Border StrokeShape="RoundRectangle 14" Stroke="{StaticResource CremeEscuro}" StrokeThickness="1">
                     <VerticalStackLayout BackgroundColor="{StaticResource BrancoQuente}" Padding="18,16" Spacing="10">
                         <HorizontalStackLayout Spacing="4">
                             <Label Text="★★★★★" FontSize="16" TextColor="{StaticResource Dourado}"/>
                         </HorizontalStackLayout>
                         <Label
-                        Text="Lugar maravilhoso e muito confortável! A piscina privativa é incrível e o café da manhã é delicioso. Voltaremos com certeza!"
-                        FontSize="14"
-                        TextColor="{StaticResource TextoPrincipal}"/>
+                     Text="Lugar maravilhoso e muito confortável! A piscina privativa é incrível e o café da manhã é delicioso. Voltaremos com certeza!"
+                     FontSize="14"
+                     TextColor="{StaticResource TextoPrincipal}"/>
                         <BoxView HeightRequest="1" Color="{StaticResource CremeEscuro}"/>
                         <HorizontalStackLayout Spacing="8">
                             <Border StrokeShape="RoundRectangle 20" BackgroundColor="{StaticResource VerdeMedio}" WidthRequest="36" HeightRequest="36">
@@ -78,16 +78,16 @@
                     </VerticalStackLayout>
                 </Border>
 
-                
+
                 <Border StrokeShape="RoundRectangle 14" Stroke="{StaticResource CremeEscuro}" StrokeThickness="1">
                     <VerticalStackLayout BackgroundColor="{StaticResource BrancoQuente}" Padding="18,16" Spacing="10">
                         <HorizontalStackLayout Spacing="4">
                             <Label Text="★★★★★" FontSize="16" TextColor="{StaticResource Dourado}"/>
                         </HorizontalStackLayout>
                         <Label
-                        Text="Melhor experiência em Brotas! O melhor hotel da região, com as duas cachoeiras mais bonitas. Equipe atenciosa e acolhedora."
-                        FontSize="14"
-                        TextColor="{StaticResource TextoPrincipal}"/>
+                     Text="Melhor experiência em Brotas! O melhor hotel da região, com as duas cachoeiras mais bonitas. Equipe atenciosa e acolhedora."
+                     FontSize="14"
+                     TextColor="{StaticResource TextoPrincipal}"/>
                         <BoxView HeightRequest="1" Color="{StaticResource CremeEscuro}"/>
                         <HorizontalStackLayout Spacing="8">
                             <Border StrokeShape="RoundRectangle 20" BackgroundColor="{StaticResource Terracota}" WidthRequest="36" HeightRequest="36">
@@ -101,16 +101,16 @@
                     </VerticalStackLayout>
                 </Border>
 
-                
+
                 <Border StrokeShape="RoundRectangle 14" Stroke="{StaticResource CremeEscuro}" StrokeThickness="1">
                     <VerticalStackLayout BackgroundColor="{StaticResource BrancoQuente}" Padding="18,16" Spacing="10">
                         <HorizontalStackLayout Spacing="4">
                             <Label Text="★★★★★" FontSize="16" TextColor="{StaticResource Dourado}"/>
                         </HorizontalStackLayout>
                         <Label
-                        Text="Quarto super confortável, silêncio e tranquilidade totais. Piscina aquecida na temperatura perfeita e atendimento impecável do início ao fim!"
-                        FontSize="14"
-                        TextColor="{StaticResource TextoPrincipal}"/>
+                     Text="Quarto super confortável, silêncio e tranquilidade totais. Piscina aquecida na temperatura perfeita e atendimento impecável do início ao fim!"
+                     FontSize="14"
+                     TextColor="{StaticResource TextoPrincipal}"/>
                         <BoxView HeightRequest="1" Color="{StaticResource CremeEscuro}"/>
                         <HorizontalStackLayout Spacing="8">
                             <Border StrokeShape="RoundRectangle 20" BackgroundColor="{StaticResource Dourado}" WidthRequest="36" HeightRequest="36">

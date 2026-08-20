@@ -7,36 +7,36 @@
     <ScrollView>
         <VerticalStackLayout Spacing="0">
 
-           
+
             <VerticalStackLayout
-            BackgroundColor="{StaticResource Dourado}"
-            Padding="24,20,24,24">
+        BackgroundColor="{StaticResource Dourado}"
+        Padding="24,20,24,24">
                 <VerticalStackLayout.GestureRecognizers>
                     <TapGestureRecognizer Tapped="IrMainPage"/>
                 </VerticalStackLayout.GestureRecognizers>
 
                 <Label
-                 Text="&lt;"
-                 FontSize="24"
-                 TextColor="{StaticResource Terracota}"
-                 VerticalOptions="Center"/>
+             Text="&lt;"
+             FontSize="24"
+             TextColor="{StaticResource Terracota}"
+             VerticalOptions="Center"/>
 
                 <Label
-                Text="Formas de Pagamento"
-                FontSize="26"
-                FontAttributes="Bold"
-                TextColor="{StaticResource VerdeEscuro}"/>
+            Text="Formas de Pagamento"
+            FontSize="26"
+            FontAttributes="Bold"
+            TextColor="{StaticResource VerdeEscuro}"/>
                 <Label
-                Text="Aceitamos diversas formas para sua comodidade"
-                FontSize="13"
-                TextColor="{StaticResource VerdeMedio}"
-                Margin="0,6,0,0"/>
+            Text="Aceitamos diversas formas para sua comodidade"
+            FontSize="13"
+            TextColor="{StaticResource VerdeMedio}"
+            Margin="0,6,0,0"/>
             </VerticalStackLayout>
 
-          
+
             <VerticalStackLayout Padding="20" Spacing="12">
 
-                
+
                 <Border StrokeShape="RoundRectangle 14" Stroke="{StaticResource CremeEscuro}" StrokeThickness="1">
                     <Grid BackgroundColor="{StaticResource BrancoQuente}" Padding="18,16">
                         <Grid.ColumnDefinitions>
@@ -57,7 +57,7 @@
                     </Grid>
                 </Border>
 
-                
+
                 <Border StrokeShape="RoundRectangle 14" Stroke="{StaticResource CremeEscuro}" StrokeThickness="1">
                     <Grid BackgroundColor="{StaticResource BrancoQuente}" Padding="18,16">
                         <Grid.ColumnDefinitions>
@@ -74,7 +74,7 @@
                     </Grid>
                 </Border>
 
-                
+
                 <Border StrokeShape="RoundRectangle 14" Stroke="{StaticResource CremeEscuro}" StrokeThickness="1">
                     <Grid BackgroundColor="{StaticResource BrancoQuente}" Padding="18,16">
                         <Grid.ColumnDefinitions>
@@ -91,7 +91,7 @@
                     </Grid>
                 </Border>
 
-                
+
                 <Border StrokeShape="RoundRectangle 14" Stroke="{StaticResource CremeEscuro}" StrokeThickness="1">
                     <Grid BackgroundColor="{StaticResource BrancoQuente}" Padding="18,16">
                         <Grid.ColumnDefinitions>
@@ -108,7 +108,7 @@
                     </Grid>
                 </Border>
 
-                
+
                 <Border StrokeShape="RoundRectangle 14" Stroke="{StaticResource CremeEscuro}" StrokeThickness="1">
                     <Grid BackgroundColor="{StaticResource BrancoQuente}" Padding="18,16">
                         <Grid.ColumnDefinitions>
@@ -129,9 +129,9 @@
                     <VerticalStackLayout Spacing="4">
                         <Label Text="💡 Política de Pagamento" FontSize="13" FontAttributes="Bold" TextColor="{StaticResource TextoPrincipal}"/>
                         <Label 
-                        Text="Para reservas feitas pelo app, é necessário pagamento antecipado via PIX ou transferência bancária. O hotel entrará em contato com os dados bancários após a confirmação da disponibilidade."
-                        FontSize="12"
-                        TextColor="{StaticResource TextoSecundario}"/>
+                    Text="Para reservas feitas pelo app, é necessário pagamento antecipado via PIX ou transferência bancária. O hotel entrará em contato com os dados bancários após a confirmação da disponibilidade."
+                    FontSize="12"
+                    TextColor="{StaticResource TextoSecundario}"/>
                     </VerticalStackLayout>
                 </Border>
 

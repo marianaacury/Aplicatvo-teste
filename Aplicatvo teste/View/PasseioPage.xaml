@@ -7,28 +7,28 @@
     <ScrollView>
         <VerticalStackLayout Spacing="0">
             <VerticalStackLayout 
-                BackgroundColor="{StaticResource VerdeEscuro}"
-                Padding="24,20,24,24">
+            BackgroundColor="{StaticResource VerdeEscuro}"
+            Padding="24,20,24,24">
                 <VerticalStackLayout.GestureRecognizers>
                     <TapGestureRecognizer Tapped="IrMainPage"/>
                 </VerticalStackLayout.GestureRecognizers>
 
                 <Label
-                Text="&lt;"
-                FontSize="24"
-                TextColor="{StaticResource Terracota}"
-                VerticalOptions="Center"/>
+            Text="&lt;"
+            FontSize="24"
+            TextColor="{StaticResource Terracota}"
+            VerticalOptions="Center"/>
 
                 <Label
-                     Text="Nossos Passeios"
-                     FontSize="26"
-                     FontAttributes="Bold"
-                     TextColor="{StaticResource BrancoQuente}"/>
-                  <Label
-                     Text="Aproveite um dia no Cassorova e mergulhe no conforto e na natureza bruta em Brotas, no alto da serra."
-                     FontSize="13"
-                     TextColor="{StaticResource CremeEscuro}"
-                     Margin="0,6,0,0"/>
+                 Text="Nossos Passeios"
+                 FontSize="26"
+                 FontAttributes="Bold"
+                 TextColor="{StaticResource BrancoQuente}"/>
+                <Label
+                 Text="Aproveite um dia no Cassorova e mergulhe no conforto e na natureza bruta em Brotas, no alto da serra."
+                 FontSize="13"
+                 TextColor="{StaticResource CremeEscuro}"
+                 Margin="0,6,0,0"/>
             </VerticalStackLayout>
 
             <CollectionView x:Name="ListaPasseio">
@@ -37,38 +37,38 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                            <VerticalStackLayout Spacing="20">
+                        <VerticalStackLayout Spacing="20">
 
                             <Frame Padding="20"
-                            Margin="24,20,24,10"
-                            BackgroundColor="{StaticResource BrancoQuente}">
+                        Margin="24,20,24,10"
+                        BackgroundColor="{StaticResource BrancoQuente}">
 
 
                                 <VerticalStackLayout Spacing="5">
 
                                     <Label Text="{Binding Nome}"
-                                           FontSize="18"
-                                           FontAttributes="Bold"
-                                           TextColor="{StaticResource TextoPrincipal}" />
+                                       FontSize="18"
+                                       FontAttributes="Bold"
+                                       TextColor="{StaticResource TextoPrincipal}" />
 
                                     <Label Text="{Binding Descricao}"
-                                           FontSize="13"
-                                           TextColor="{StaticResource TextoSecundario}" />
+                                       FontSize="13"
+                                       TextColor="{StaticResource TextoSecundario}" />
 
                                     <Label Text="{Binding Horario, StringFormat='Horário: {0}'}"
-                                           FontSize="12" />
+                                       FontSize="12" />
 
                                     <Label Text="{Binding Preco, StringFormat='Preço: R$ {0:F2}'}"
-                                           FontSize="14"
-                                           FontAttributes="Bold"
-                                           TextColor="{StaticResource VerdeClaro}" />
+                                       FontSize="14"
+                                       FontAttributes="Bold"
+                                       TextColor="{StaticResource VerdeClaro}" />
 
                                 </VerticalStackLayout>
                             </Frame>
 
                         </VerticalStackLayout>
 
-                     
+
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
